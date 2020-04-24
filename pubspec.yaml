@@ -1,0 +1,29 @@
+name: biblio
+description: Bibl.io
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  font_awesome_flutter: ^8.8.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+  - family: ProductSans
+    fonts:
+    - asset: fonts/ProductSans-Regular.ttf
+      weight: 400
+    - asset: fonts/ProductSans-Bold.ttf
+      weight: 700
