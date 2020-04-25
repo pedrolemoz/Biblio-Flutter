@@ -19,6 +19,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+   - assets/
 
   fonts:
   - family: ProductSans
@@ -26,4 +28,10 @@ flutter:
     - asset: fonts/ProductSans-Regular.ttf
       weight: 400
     - asset: fonts/ProductSans-Bold.ttf
+      weight: 700
+  - family: Merriweather
+    fonts:
+    - asset: fonts/Merriweather-Regular.ttf
+      weight: 400
+    - asset: fonts/Merriweather-Bold.ttf
       weight: 700

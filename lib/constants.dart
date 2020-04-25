@@ -35,7 +35,15 @@ const kHintTextStyle = TextStyle(
 
 const kHeaderTextStyle = TextStyle(
   color: Colors.black,
-  fontFamily: 'ProductSans',
+  fontFamily: 'Merriweather',
   fontWeight: FontWeight.bold,
-  fontSize: 48.0,
+  fontSize: 34.0,
 );
+
+const kSecondaryTextStyle =  TextStyle(
+  color: Colors.black,
+  fontFamily: 'Merriweather',
+  fontWeight: FontWeight.bold,
+  fontSize: 24.0,
+);
+
