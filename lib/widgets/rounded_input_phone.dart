@@ -2,7 +2,11 @@ import 'package:biblio/constants.dart';
 import 'package:flutter/material.dart';
 
 class RoundedInputPhone extends StatelessWidget {
-  // TODO: Implementar o controller do text field
+  RoundedInputPhone(
+      {@required this.numberController, @required this.countryCodeController});
+
+  final TextEditingController numberController;
+  final TextEditingController countryCodeController;
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +17,7 @@ class RoundedInputPhone extends StatelessWidget {
           width: 50.0,
           height: 50.0,
           child: TextField(
+            controller: countryCodeController,
             style: kInputCountryCodeTextStyle,
             showCursor: false,
             textAlign: TextAlign.justify,
@@ -20,9 +25,12 @@ class RoundedInputPhone extends StatelessWidget {
             decoration: InputDecoration(
               contentPadding: EdgeInsets.only(left: 15.0),
               filled: true,
-              fillColor: kInputTextColorBlue,
+              fillColor: Theme.of(context).primaryColorDark,
               hintText: '+55',
-              hintStyle: kInputCountryCodeTextStyle,
+              hintStyle: Theme.of(context)
+                  .textTheme
+                  .button
+                  .copyWith(color: Colors.grey),
               border: OutlineInputBorder(
                 borderSide: BorderSide.none,
                 borderRadius: BorderRadius.only(
@@ -37,13 +45,14 @@ class RoundedInputPhone extends StatelessWidget {
           width: 200.0,
           height: 50.0,
           child: TextField(
+            controller: numberController,
             showCursor: false,
             keyboardType: TextInputType.number,
             style: kInputTextStyle,
             decoration: InputDecoration(
               contentPadding: EdgeInsets.only(left: 15.0),
               filled: true,
-              fillColor: kInputTextColorGray,
+              fillColor: kBackgroundGreyColor,
               hintText: 'Telefone',
               hintStyle: kHintTextStyle,
               border: OutlineInputBorder(

@@ -1,4 +1,4 @@
-import 'package:biblio/constants.dart';
+
 import 'package:flutter/material.dart';
 
 class RoundedButton extends StatelessWidget {
@@ -22,10 +22,7 @@ class RoundedButton extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(4.0),
       ),
-      child: Text(
-        labelText,
-        style: kButtonTextStyle
-      ),
+      child: Text(labelText, style: Theme.of(context).textTheme.button),
     );
   }
 }

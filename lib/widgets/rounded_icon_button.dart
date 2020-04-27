@@ -1,4 +1,3 @@
-import 'package:biblio/constants.dart';
 import 'package:flutter/material.dart';
 
 class RoundedIconButton extends StatelessWidget {
@@ -34,7 +33,7 @@ class RoundedIconButton extends StatelessWidget {
           ),
           Text(
             labelText,
-            style: kButtonTextStyle,
+            style: Theme.of(context).textTheme.button,
           ),
         ],
       ),
