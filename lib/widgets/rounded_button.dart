@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class RoundedButton extends StatelessWidget {
@@ -17,7 +16,7 @@ class RoundedButton extends StatelessWidget {
     return RawMaterialButton(
       onPressed: onPressed,
       elevation: 0.0,
-      constraints: BoxConstraints.tightFor(height: 50.0, width: 200.0),
+      constraints: BoxConstraints.tightFor(height: 50.0),
       fillColor: fillColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(4.0),

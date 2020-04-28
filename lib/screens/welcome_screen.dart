@@ -30,11 +30,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                // Container(
-                //   width: MediaQuery.of(context).size.width,
-                //   height: MediaQuery.of(context).size.height / 2.5,
-                //   child: Image.asset('assets/welcome.png'),
-                // ),
                 Expanded(
                   flex: 3,
                   child: Image.asset('assets/welcome.png'),
@@ -74,14 +69,19 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          RoundedButton(
-                              fillColor: Theme.of(context).primaryColorDark,
-                              labelText: 'Ver livros',
-                              onPressed: () {}),
-                          RoundedButton(
-                              fillColor: Theme.of(context).primaryColorDark,
-                              labelText: 'Ver artigos',
-                              onPressed: () {}),
+                          Expanded(
+                            child: RoundedButton(
+                                fillColor: Theme.of(context).primaryColorDark,
+                                labelText: 'Ver livros',
+                                onPressed: () {}),
+                          ),
+                          SizedBox(width: 15.0),
+                          Expanded(
+                            child: RoundedButton(
+                                fillColor: Theme.of(context).primaryColorDark,
+                                labelText: 'Ver artigos',
+                                onPressed: () {}),
+                          ),
                         ],
                       ),
                     ],

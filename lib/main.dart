@@ -1,15 +1,16 @@
 import 'package:biblio/screens/login_screen.dart';
+import 'package:biblio/screens/registration_screen.dart';
 import 'package:biblio/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(Components());
+void main() => runApp(Biblio());
 
-class Components extends StatefulWidget {
+class Biblio extends StatefulWidget {
   @override
-  _ComponentsState createState() => _ComponentsState();
+  _BiblioState createState() => _BiblioState();
 }
 
-class _ComponentsState extends State<Components> {
+class _BiblioState extends State<Biblio> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,7 +20,7 @@ class _ComponentsState extends State<Components> {
         primaryColor: Color(0xFF3376cc),
         primaryColorDark: Color(0xFF004b9a),
         primaryColorLight: Color(0xFF6fa4ff),
-        accentColor: Color(0xFFE93C51),
+        accentColor: Color(0xFFCC5547),
         textTheme: TextTheme(
           display1: TextStyle(
             color: Colors.white,
@@ -43,7 +44,7 @@ class _ComponentsState extends State<Components> {
             color: Colors.white,
             fontFamily: 'ProductSans',
             fontWeight: FontWeight.bold,
-            fontSize: 14.0,
+            fontSize: 18.0,
           ),
         ),
       ),
@@ -51,6 +52,7 @@ class _ComponentsState extends State<Components> {
       routes: {
         WelcomeScreen.id: (context) => WelcomeScreen(),
         LoginScreen.id: (context) => LoginScreen(),
+        RegistrationScreen.id: (context) => RegistrationScreen(),
       },
     );
   }
